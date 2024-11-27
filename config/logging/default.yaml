@@ -1,0 +1,5 @@
+level: "INFO"
+log_dir: "artifacts/logs"
+handlers:
+  - "console"
+  - "file"

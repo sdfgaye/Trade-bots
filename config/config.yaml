@@ -1,0 +1,34 @@
+defaults:
+  - environments: development
+  - logging: default
+  - strategy: scalping
+  - data_ingestion: default
+  - data_sources: binance       # Default data source
+  - _self_
+
+hydra:
+  run:
+    dir: .  
+  hydra_logging:
+    disable_existing_loggers: false 
+ 
+general:
+  retries: 3                  # Number of attempt for the errors
+
+
+logging:
+  level: "INFO"               # Log level (DEBUG, INFO, WARNING, ERROR)
+  log_dir: "artifacts/logs"   # Directory for log files
+  handlers:
+    - "console"               # Console logging
+    - "file"                  # File logging
+
+
+# Configuration for data_ingestion
+data_ingestion:
+  symbols: ["BTCUSDT", "ETHUSDT", "BNBUSDT"]  # List of symbols to fetch
+  interval: "1h"                              # Data interval (e.g., 1m, 1h, 1d)
+  start_time: "2022-01-01"                    # Start date for historical data
+  end_time: null                              # End date (optional, can be null for current time)
+  save_dir: "artifacts/data"                  # Directory to save the raw data
+  save_raw: true   

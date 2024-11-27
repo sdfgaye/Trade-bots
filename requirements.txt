@@ -1,0 +1,7 @@
+ipykernel
+vectorbt
+seaborn
+python-dotenv
+hydra-core
+omegaconf
+-e .

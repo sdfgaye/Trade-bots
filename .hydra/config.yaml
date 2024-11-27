@@ -1,0 +1,17 @@
+environments:
+  hydra:
+    run:
+      dir: .
+  logging:
+    level: DEBUG
+    log_dir: artifacts/logs/development
+logging:
+  level: INFO
+  log_dir: artifacts/logs
+  handlers:
+  - console
+  - file
+strategy:
+- strategy: scalping
+general:
+  retries: 3

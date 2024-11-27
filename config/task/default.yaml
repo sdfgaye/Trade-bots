@@ -1,0 +1,8 @@
+tasks:
+  - name: "default_task"
+    source: binance
+    params:
+      symbol: "BTCUSDT"
+      interval: "1h"
+      start_time: "2022-01-01"
+      end_time: null

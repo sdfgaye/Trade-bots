@@ -1,0 +1,2 @@
+api_key: ${oc.env:BINANCE_API_KEY, ""}
+api_secret: ${oc.env:BINANCE_API_SECRET, ""}

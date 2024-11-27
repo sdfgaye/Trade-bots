@@ -1,0 +1,7 @@
+hydra:
+  run:
+    dir: .  # Avoid creating subdirectories for runs in development
+
+logging:
+  level: "DEBUG"
+  log_dir: "artifacts/logs/development"

@@ -1,0 +1,8 @@
+hydra:
+  run:
+    dir: "/var/log/tradingbot"  # Example log directory for production
+
+logging:
+  level: "INFO"
+  log_dir: "/var/log/tradingbot"
+

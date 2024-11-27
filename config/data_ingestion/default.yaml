@@ -1,0 +1,6 @@
+symbols: ["BTCUSDT", "ETHUSDT", "BNBUSDT"]
+interval: "1h"
+start_time: "2022-01-01"
+end_time: null
+save_dir: "artifacts/data"
+save_raw: true

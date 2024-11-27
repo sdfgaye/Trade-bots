@@ -1,0 +1,4 @@
+level: "DEBUG"
+log_dir: "artifacts/logs/debug"
+handlers:
+  - "console"
