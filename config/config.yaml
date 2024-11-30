@@ -1,7 +1,6 @@
 defaults:
   - environments: development
   - logging: default
-  - strategy: scalping
   - data_ingestion: default
   - data_sources: binance       # Default data source
   - _self_
