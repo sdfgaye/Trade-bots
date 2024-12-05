@@ -3,6 +3,7 @@ defaults:
   - logging: default
   - data_ingestion: default
   - data_sources: binance       # Default data source
+  - tasks: default
   - _self_
 
 hydra:

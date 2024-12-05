@@ -8,13 +8,13 @@ from utils.logger import get_logger
 # Load environment variables from .env file
 load_dotenv()
 
-@hydra.main(version_base="1.2", config_path="config", config_name="config")
+@hydra.main(version_base="1.2", config_path="../config", config_name="config")
 def main(cfg: DictConfig):
     # Convert Hydra configuration to DataIngestionConfig dataclass
     config = DataIngestionConfig(
         binance=cfg.data_sources.binance,
-        rest_api=None,
-        file=cfg.data_sources.file,
+        # rest_api=None,
+        # file=cfg.data_sources.file,
         tasks=cfg.tasks
     )
 

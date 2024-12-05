@@ -11,7 +11,30 @@ logging:
   handlers:
   - console
   - file
-strategy:
-- strategy: scalping
+data_ingestion:
+  symbols:
+  - BTCUSDT
+  - ETHUSDT
+  - BNBUSDT
+  interval: 1h
+  start_time: '2022-01-01'
+  end_time: null
+  save_dir: artifacts/data
+  save_raw: true
+data_sources:
+  binance:
+    api_key: ${oc.env:BINANCE_API_KEY, ""}
+    api_secret: ${oc.env:BINANCE_API_SECRET, ""}
+tasks:
+  tasks:
+  - name: crypto_task
+    source: binance
+    params:
+      symbols:
+      - BTCUSDT
+      - ETHUSDT
+      interval: 1h
+      start_time: '2022-01-01'
+      end_time: null
 general:
   retries: 3

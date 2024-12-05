@@ -1,8 +1,8 @@
 tasks:
-  - name: "default_task"
+  - name: "crypto_task"
     source: binance
     params:
-      symbol: "BTCUSDT"
+      symbols: ["BTCUSDT", "ETHUSDT"]
       interval: "1h"
       start_time: "2022-01-01"
       end_time: null

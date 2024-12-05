@@ -33,7 +33,7 @@ class TaskConfig:
 @dataclass
 class DataIngestionConfig:
     binance: Optional[BinanceConfig] = None
-    file: Optional[FileConfig] = None
+    # file: Optional[FileConfig] = None
     tasks: List[TaskConfig] = None
 
 
@@ -113,7 +113,7 @@ class DataIngestion:
             Dict[str, Dict[str, pd.DataFrame]]: A dictionary of tasks, each containing a dictionary of DataFrames keyed by symbol.
         """
         all_data = {}
-        for task in self.config.tasks:
+        for task in self.config.tasks.tasks:
             source_name = task.source
             params = task.params
             self.logger.info(f"Running task: {task.name}")

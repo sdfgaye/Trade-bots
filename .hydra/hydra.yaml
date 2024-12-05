@@ -113,7 +113,7 @@ hydra:
     - hydra.mode=RUN
     task: []
   job:
-    name: test
+    name: test_data_ingestion
     chdir: null
     override_dirname: ''
     id: ???
@@ -142,7 +142,9 @@ hydra:
       provider: schema
     output_dir: C:\Users\33649\Documents\bots\crypto
     choices:
-      strategy: scalping
+      tasks: default
+      data_sources: binance
+      data_ingestion: default
       logging: default
       environments: development
       hydra/env: default
